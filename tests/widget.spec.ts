@@ -31,4 +31,10 @@ test.describe('Uchi.ru widget ', () => {
 
     expect(await widgetPage.getTitle()).toEqual('Связь с поддержкой');
   });
+
+test('registration button is visible', async ({ page }) => {
+  await page.goto('/');
+  const registerButton = page.locator('button:has-text("Зарегистрироваться"), a:has-text("Зарегистрироваться")').first();
+  await expect(registerButton).toBeVisible();
+});
 });
