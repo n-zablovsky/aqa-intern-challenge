@@ -25,7 +25,7 @@ test.describe('Uchi.ru widget ', () => {
 
     const articles = await widgetPage.getPopularArticles();
 
-    await articles[0].click();
+    await articles.nth(0).click();
 
     await widgetPage.clickWriteToUs();
 
